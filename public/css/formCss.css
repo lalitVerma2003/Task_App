@@ -1,0 +1,81 @@
+body {
+    width: 100%;
+    height: 600px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* background-color: red; */
+}
+
+.dataForm {
+    width: 50%;
+    height: 450px;
+    display: block;
+    margin: 40px auto;
+    padding: 30px 10px;
+    border: 2px solid rgb(209, 111, 247,0.5);
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.dataForm:hover{
+    transform: scale(1.05);
+    /* box-shadow: 4px 4px 4px 2px rgb(209, 111, 247); */
+}
+
+label {
+    display: block;
+    font-size: 1.3rem;
+    margin: 10px 10px;
+}
+
+span label {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 10px 20px;
+    ;
+}
+
+#name,
+#email {
+    width: 90%;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    font-size: 1.1rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+span {
+    display: block;
+    font-size: 1.3rem;
+    margin: 10px 10px;
+}
+
+.gender,
+.status {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 10px 20px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    width: 20%;
+    height: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(209, 111, 247);
+    background-color: white;
+    border: 1px solid rgb(209, 111, 247);
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+button:hover{
+    color: white;
+    background-color: rgb(209, 111, 247);
+    transform: scale(1.1);
+}

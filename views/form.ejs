@@ -1,0 +1,35 @@
+<%- include('partials/head.ejs') %>
+    <%- include('partials/form.ejs') %>
+        <link rel="stylesheet" href="../public/css/formCss.css">
+        </head>
+
+        <body>
+            <%- include('partials/navbar.ejs') %>
+                <div class="dataForm">
+                    <form action="/tasks/new" method="post">
+                        <label for="name">Enter name:</label>
+                        <input type="text" id="name" placeholder="enter name" name="name">
+                        <label for="email">Enter email:</label>
+                        <input type="email" id="email" placeholder="enter email" name="email">
+
+                        <span>Choose gender:</span>
+                        <label for="male" class="gender">Male
+                            <input type="radio" value="male" name="gender" id="male">
+                        </label>
+                        <label for="female" class="gender">Female
+                            <input type="radio" value="female" name="gender" id="female">
+                        </label>
+
+                        <span>Enter status:</span>
+                        <label for="act" class="status">Active
+                            <input type="radio" value="active" name="status" id="act">
+                        </label>
+                        <label for="inact" class="status">Inactive
+                            <input type="radio" value="inactive" name="status" id="inact">
+                        </label>
+                        <button>Save</button>
+                    </form>
+                </div>
+        </body>
+
+        </html>

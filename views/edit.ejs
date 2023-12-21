@@ -1,0 +1,37 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/form.ejs') %>
+    </head>
+
+    <body>
+        <%- include('partials/navbar.ejs') %>
+            <div class="dataForm">
+                <form action="/tasks/<%= task._id %>?_method=PUT" method="post">
+                    <label for="name" class="name">Enter name:</label>
+                    <input type="text" id="name" placeholder="enter name" name="name" value="<%= task.name %>">
+                    <label for="email" class="email">Enter email:</label>
+                    <input type="email" id="email" placeholder="enter email" name="email" value="<%=task.email%>">
+
+                    <span>Choose gender:</span>
+                    <% for(let gen of gender){ %>
+                        <label for="<%= gen.toLowerCase() %>" class="gender">
+                            <%= gen %>
+                                <input type="radio" value="<%= gen.toLowerCase() %>" name="gender"
+                                    id="<%= gen.toLowerCase() %>" <%=task.gender===gen.toLowerCase()?'checked':'' %>>
+                        </label>
+                        <% } %>
+
+                            <span>Enter status:</span>
+                            <% for(let stat of status){ %>
+                                <label for="<%= stat.toLowerCase() %>" class="status">
+                                    <%= stat %>
+                                        <input type="radio" value="<%= stat.toLowerCase() %>" name="status"
+                                            id="<%= stat.toLowerCase() %>"
+                                            <%=task.status===stat.toLowerCase()?'checked':'' %>>
+                                </label>
+                                <% } %>
+
+                                    <button>Save</button>
+                </form>
+            </div>
+    </body>
+    </html>

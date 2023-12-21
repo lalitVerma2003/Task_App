@@ -1,0 +1,52 @@
+<%- include('partials/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('partials/navbar.ejs') %>
+            <div class="data">
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>@Email</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    <% for(let task of allTasks) {%>
+                        <tr>
+                            <td>
+                                <%= task.id%>
+                            </td>
+                            <td>
+                                <%= task.name %>
+                            </td>
+                            <td>
+                                <%= task.email %>
+                            </td>
+                            <td>
+                                <%= task.gender %>
+                            </td>
+                            <td>
+                                <%= task.status %>
+                            </td>
+                            <td>
+                                <button class="action"><a href="/tasks/<%=task._id %>/edit">Edit</a></button>
+                                <form action="/tasks/<%= task._id %>?_method=DELETE" method="post">
+                                    <button class="action">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% } %>
+                </table>
+            </div>
+    </body>
+
+    </html>
